@@ -4,17 +4,17 @@ stir
 Record time taken in your PHP website, and display as HTML or JSON.
 
 ## Enable and disable easily
-(falls back to safe empty functions)
+(When disabled falls back to safe-to-use empty functions)
 
 ```php
-// For WordPress, only enable if user logged in.
+// For example in WordPress, only enable if an administrator user is logged in.
 define ('STIR_ENABLED', current_user_can('administrator'));
 ```
 
 ## Measure times
 ```php
 // Start measuring:
-function displayPage()
+function displayPage() // example template function
 {
 	stir('display page');
 
@@ -52,10 +52,11 @@ stirDisplayRecordedTimesForHTML();
 <?php
 ```
 
-## Display recorded times as part of JSON
+## Display recorded times in a JSON response
 ```php
 $action = 'get-user-favorites';
 $info = getInfoForUserFavorites();
 
+// The following function still works when stir is set to disabled.
 stirDisplayJSONInfo($info, $action);
 ```
