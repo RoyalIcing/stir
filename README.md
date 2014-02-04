@@ -4,7 +4,7 @@ stir
 Record time taken in your PHP website, and display as HTML or JSON.
 
 ## Enable and disable easily
-(When disabled falls back to safe-to-use empty functions)
+(When stir is disabled, it falls back to safe-to-use empty functions)
 
 ```php
 // For example in WordPress, only enable if an administrator user is logged in.
