@@ -196,7 +196,7 @@ function stirGetRecordedQueries()
 	global $wpdb;
 	
 	// Only works with WordPress's database querier, for the moment.
-	if (!isset($GLOBALS['wpdb'])) {
+	if (!isset($GLOBALS['wpdb']) || !isset($wpdb->queries)) {
 		return null;
 	}
 	
