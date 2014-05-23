@@ -1,0 +1,9 @@
+{
+	"name": "burntcaramel/stir",
+	"description": "Record time taken in your website.",
+	"keywords": ["record", "time", "benchmark", "stir"],
+	"license": "MIT",
+	"require": {
+		"php": ">=5.3.0"
+	}
+}
